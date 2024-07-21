@@ -363,6 +363,11 @@
 
 <body class="" style="visibility: hidden;">
 
+<script>
+    DemoApp.toggleBackButton(this);
+    DemoApp.toggleMainButton(this)
+</script>
+
 <section id="top_sect" class="second">
     <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello, World!»</button>
     <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
