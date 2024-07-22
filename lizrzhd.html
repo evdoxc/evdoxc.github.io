@@ -1513,6 +1513,8 @@
             source = document.createElement('source')
 
         video.controls = 'true'
+        video.preload = 'true'
+        video.autoplay = 'true'
         source.src = `videos/${i}.mov`
 
         sect.appendChild(video)
@@ -1525,8 +1527,6 @@
   margin: auto;`
         video.style.display = 'none'
 
-        video.preload = 'true'
-        video.autoplay = 'true'
         // video.onloadeddata = () => { videosLoaded += 1; loadPr() }
         video.onended = () => {
             video.remove()
