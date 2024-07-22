@@ -1352,11 +1352,9 @@
 
         photos = [],
         photosCount = 137,
-        photosLoaded = 0
 
         videos = [],
         videosCount = 50,
-        videosLoaded = 0,
 
         j = 0
 
@@ -1460,17 +1458,21 @@
         end.style.display = ''
     }
 
-    loadPr = () => {
-        let loaded = videosLoaded,
-            count = videosCount
-
-        if (loaded === count) {
+    loadPr = i => {
+        if (i === 100) {
             loadingText.innerText = '\n'
             btn.style.display = 'block'
         } else {
-            loadingText.innerText = `Загружено ${Math.ceil(loaded / count * 100)}%\nПосле загрузки появится кнопка\nА пока идёт загрузка:`
+            loadingText.innerText = `Загружено ${i}%\nПосле загрузки появится кнопка\nА пока идёт загрузка:`
         }
     }
+
+    let o = 0,
+        int = setInterval(() => {
+            o += 1
+            loadPr(o)
+            if (o === 100) clearInterval(int)
+        }, 150)
 
     for (let i = 0; i < audiosCount; i++) {
         let audio = document.createElement('audio')
@@ -1500,11 +1502,8 @@
   max-height: 100dvh;
   margin: auto;`
         photo.style.display = 'none'
-
-        photo.onload = () => { photosLoaded += 1; loadPr() }
         photos.push(photo)
     }
-            // photos[0].style.display = ''
 
     for (let i = 0; i < videosCount; i++) {
         let video = document.createElement('video'),
@@ -1524,7 +1523,7 @@
         video.style.display = 'none'
 
         video.preload = 'true'
-        video.onloadeddata = () => { videosLoaded += 1; loadPr() }
+        // video.onloadeddata = () => { videosLoaded += 1; loadPr() }
         video.onended = () => {
             video.remove()
             
