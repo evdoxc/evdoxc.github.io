@@ -1465,7 +1465,7 @@
             count = videosCount
 
         if (loaded === count) {
-            loadingText.innerText = ''
+            loadingText.innerText = '\n'
             btn.style.display = 'block'
         } else {
             loadingText.innerText = `Загружено ${Math.ceil(loaded / count * 100)}%\nПосле загрузки появится кнопка\nА пока идёт загрузка:`
