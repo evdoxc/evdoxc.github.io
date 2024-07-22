@@ -398,7 +398,7 @@
         <img src="main.jpg">
         <h3>Привет<br>Надень наушники и подготовься<br>Как приготовишься - жми на кнопку</h3>
         <h4>Это займет у тебя 15 минут</h4>
-        <h4 id = 'loading'>Загружено 0%<br>После загрузки появится кнопка<br>Пока идёт загрузка:</h4>
+        <h4 id = 'loading'>Загружено 0%<br>После загрузки появится кнопка<br>А Пока идёт загрузка:</h4>
         <h3 id = 'dates'></h3>
         <button id="main_btn" onclick="step0()" style="display: none;">ватафак</button>
     </div>
@@ -1465,10 +1465,10 @@
             count = videosCount
 
         if (loaded === count) {
-            loadingText.remove()
+            loadingText.innerHTML = ''
             btn.style.display = 'block'
         } else {
-            loadingText.innerText = `Загружено ${Math.ceil(loaded / count * 100)}%\nПосле загрузки появится кнопка\nПока идёт загрузка:`
+            loadingText.innerText = `Загружено ${Math.ceil(loaded / count * 100)}%\nПосле загрузки появится кнопка\nА пока идёт загрузка:`
         }
     }
 
