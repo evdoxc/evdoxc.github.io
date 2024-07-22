@@ -373,13 +373,13 @@
             margin: 4px 0;
         }
 
-        #end {
+        /* #end {
             position: fixed;
             inset: 0px;
             max-width: 100vw;
             max-height: 100dvh;
             margin: auto;
-        }
+        } */
     </style>
 </head>
 
@@ -399,15 +399,17 @@
         <h3>Привет<br>Надень наушники и подготовься<br>Как приготовишься - жми на кнопку</h3>
         <h4>Это займет у тебя 15 минут</h4>
         <h4 id = 'loading'>Загружено 0%<br>После загрузки появится кнопка<br>А Пока идёт загрузка:</h4>
-        <h3 id = 'dates'></h3>
+        <!-- <h3 id = 'dates'></h3> -->
         <button id="main_btn" onclick="step0()" style="display: none;">ватафак</button>
     </div>
-    <div id="end" style="opacity: 0; display: none;"><h1>в конце<br>
-        приятные слова<br>
-        какието<br>
-        надо?<br>
-        или пока что<br>
-        на отъебись пишу<br></h1></div>
+    <div id="end" style="opacity: 0; display: none;"><h1>лапочка<br>
+        мы столько всего пережили вместе и я бесконечно благодарен жизни что в ней появилась ты<br>
+        я готов пережить с тобой любые невзгоды и преграды я тебя очень люблю и сейчас пишу это все в 05:07 и знаешь<br>
+        я счастлив, я счастлив что снова могу чувствовать тех бабочек которые так же сильно щекотали как в ночь 20.04.23<br>
+        я бесконечно в тебя влюблен….<br>
+        береги себя лапочка<br>
+        я тебя люблю<br>
+        ты навсегда останешься моими семью минутами после жизни</h1></div>
     <!-- <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
     <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
     <button onclick="DemoApp.expand();">Expand Webview</button>
@@ -1358,37 +1360,37 @@
 
         j = 0
 
-    let now = Math.floor(Date.now() / 1000),
-        days = [
-            Math.floor(now / 60 / 60 / 24 - 19896),
-            Math.floor(now / 60 / 60 / 24 - 19900),
-            Math.floor(now / 60 / 60 / 24 - 19915)
-        ],
-        seconds = [
-            now - 19896 * 60 * 60 * 24,
-            now - 19900 * 60 * 60 * 24,
-            now - 19915 * 60 * 60 * 24
-        ]
+    // let now = Math.floor(Date.now() / 1000),
+    //     days = [
+    //         Math.floor(now / 60 / 60 / 24 - 19896),
+    //         Math.floor(now / 60 / 60 / 24 - 19900),
+    //         Math.floor(now / 60 / 60 / 24 - 19915)
+    //     ],
+    //     seconds = [
+    //         now - 19896 * 60 * 60 * 24,
+    //         now - 19900 * 60 * 60 * 24,
+    //         now - 19915 * 60 * 60 * 24
+    //     ]
 
-    dates.innerText = `мы познакомились ${days[0]} дней назад - это ${seconds[0]} секунд\n\nс момента как мы поцеловались прошло ${days[1]} дней - ${seconds[1]} секунд\n\nмы вернули общение ${days[2]} дней назад - ${seconds[2]} секунд`
+    // dates.innerText = `мы познакомились ${days[0]} дней назад - это ${seconds[0]} секунд\n\nс момента как мы поцеловались прошло ${days[1]} дней - ${seconds[1]} секунд\n\nмы вернули общение ${days[2]} дней назад - ${seconds[2]} секунд`
 
-    setInterval(() => {
-        if (j === 0 && maindiv) {
-            let now = Math.floor(Date.now() / 1000),
-                days = [
-                    Math.floor(now / 60 / 60 / 24 - 19896),
-                    Math.floor(now / 60 / 60 / 24 - 19900),
-                    Math.floor(now / 60 / 60 / 24 - 19915)
-                ],
-                seconds = [
-                    now - 19896 * 60 * 60 * 24,
-                    now - 19900 * 60 * 60 * 24,
-                    now - 19915 * 60 * 60 * 24
-                ]
+    // setInterval(() => {
+    //     if (j === 0 && maindiv) {
+    //         let now = Math.floor(Date.now() / 1000),
+    //             days = [
+    //                 Math.floor(now / 60 / 60 / 24 - 19896),
+    //                 Math.floor(now / 60 / 60 / 24 - 19900),
+    //                 Math.floor(now / 60 / 60 / 24 - 19915)
+    //             ],
+    //             seconds = [
+    //                 now - 19896 * 60 * 60 * 24,
+    //                 now - 19900 * 60 * 60 * 24,
+    //                 now - 19915 * 60 * 60 * 24
+    //             ]
 
-            dates.innerText = `мы познакомились ${days[0]} дней назад - это ${seconds[0]} секунд\n\nс момента как мы поцеловались прошло ${days[1]} дней - ${seconds[1]} секунд\n\nмы вернули общение ${days[2]} дней назад - ${seconds[2]} секунд`
-        }
-    }, 1000)
+    //         dates.innerText = `мы познакомились ${days[0]} дней назад - это ${seconds[0]} секунд\n\nс момента как мы поцеловались прошло ${days[1]} дней - ${seconds[1]} секунд\n\nмы вернули общение ${days[2]} дней назад - ${seconds[2]} секунд`
+    //     }
+    // }, 1000)
 
     step0 = () => {
         if (j !== 0) return
@@ -1463,7 +1465,7 @@
             loadingText.innerText = '\n'
             btn.style.display = 'block'
         } else {
-            loadingText.innerText = `Загружено ${i}%\nПосле загрузки появится кнопка\nА пока идёт загрузка:`
+            loadingText.innerText = `Загружено ${i}%\nПосле загрузки появится кнопка`
         }
     }
 
@@ -1473,6 +1475,7 @@
             loadPr(o)
             if (o === 100) clearInterval(int)
         }, 150)
+    // loadPr(100)
 
     for (let i = 0; i < audiosCount; i++) {
         let audio = document.createElement('audio')
