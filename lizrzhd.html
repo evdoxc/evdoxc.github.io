@@ -1461,8 +1461,8 @@
     }
 
     loadPr = () => {
-        let loaded = photosLoaded + videosLoaded,
-            count = photosCount + videosCount
+        let loaded = videosLoaded,
+            count = videosCount
 
         if (loaded === count) {
             loadingText.remove()
